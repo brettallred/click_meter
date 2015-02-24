@@ -1,4 +1,4 @@
-require "active_rest_client"
-
-class ClickMeter::Account < ActiveRestClient::Base
+class ClickMeter::Account < ClickMeter::Base
+  get :take, "/account"
+  post :save, '/account'
 end
