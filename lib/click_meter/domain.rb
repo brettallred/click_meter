@@ -14,7 +14,7 @@ class ClickMeter::Domain < ClickMeter::Base
   #    {:id => 123, :uri => "string"}, {:id => 321, :uri => "string"}
   #  ]
   #}
-  get :all, '/domains',
+  get :all, '/domains'
 
   #Delete a domain from listing
   # Response
