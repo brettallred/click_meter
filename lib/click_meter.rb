@@ -5,6 +5,7 @@ require "click_meter/account"
 require "click_meter/account_plan"
 require "click_meter/conversion"
 require "click_meter/domain"
+require "click_meter/account_guest"
 require "active_rest_client"
 
 module ClickMeter
