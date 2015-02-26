@@ -6,12 +6,12 @@ module ClickMeter
     include Configuration
 
     before_request :add_authentication_details
-    request_body_type :json
 
     def self.inherited(klass)
       super
       klass.class_eval {
         after_request :debug_response
+        request_body_type :json
       }
     end
 
