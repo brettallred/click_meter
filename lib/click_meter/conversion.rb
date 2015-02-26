@@ -52,4 +52,11 @@ class ClickMeter::Conversion < ClickMeter::Base
   #     "count": 2
   # }
   get :count, '/conversions/count'
+
+  #Patch a conversion to be assigned or removed from a datapoint
+  put :datapoint, '/conversions/:id/datapoints/patch'
+
+  #List all datapoints associated to this conversion. Use the same filters parameters as "/datapoints"
+  get :datapoints, '/conversions/:id/datapoints'
+
 end

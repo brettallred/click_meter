@@ -24,7 +24,7 @@ module ClickMeter
     end
 
     def add_authentication_details(name, request)
-      #Add 'Content-Type' header. This is unusual for the request headers, but, otherwise, the API does not see POST body.
+      #Add 'Content-Type' header, otherwise, the API does not see POST body.
       request.headers['Content-Type'] = 'application/json; charset=UTF-8'
       request.headers["X-Clickmeter-Authkey"] = self.class.auth_key.to_s
     end

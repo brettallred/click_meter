@@ -61,4 +61,13 @@ class ClickMeter::Datapoint < ClickMeter::Base
   #     "uri": "/datapoints/2027645"
   # }
   post :save, '/datapoints/:id'
+
+  #Creation of multiple datapoints at once. Maximum 25
+  post :create_batch, '/datapoints/batch'
+
+  #Deletion of multiple datapoints at once. Maximum 25
+  delete :destroy_batch, '/datapoints/batch'
+
+  #Editing of multiple datapoints at once. Maximum 25
+  put :save_batch, '/datapoints/batch'
 end
