@@ -1,6 +1,6 @@
 require 'forwardable'
 module ClickMeter
-	module Configuration
+  module Configuration
 
     def self.included(base)
       base.extend(ClassMethods)
@@ -17,12 +17,13 @@ module ClickMeter
         def instance
           @_instance ||= new
         end
+
         private :new
       end
 
       def initialize
         @auth_key = nil
-        @debug    = false
+        @debug = false
       end
 
       alias_method :debug?, :debug
@@ -35,5 +36,5 @@ module ClickMeter
       def_delegators :"ClickMeter::Configuration::Config", :auth_key, :debug, :auth_key=, :debug=, :debug?
 
     end
-	end
+  end
 end
