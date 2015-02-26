@@ -1,9 +1,11 @@
+#Section: Datapoints Management - Conversions
 class ClickMeter::Conversion < ClickMeter::Base
   #Creates conversion
   # Response:
-  # :id => 7711,
-  # :uri => "/conversions/7711"
-  # :name => "string"  (optional)
+  # {
+  #     "id": 7730,
+  #     "uri": "/conversions/7730"
+  # }
   post :create, '/conversions'
 
   #List of all the conversions associated to the user
@@ -18,30 +20,36 @@ class ClickMeter::Conversion < ClickMeter::Base
 
   #Delete a conversion
   #Response:
-  # :id => 7711,
-  # :uri => "/conversions/7711"
-  # :name => "string"  (optional)
+  # {
+  #     "id": 7730,
+  #     "uri": "/conversions/7730"
+  # }
   delete :destroy, '/conversions/:id'
 
   #Get the specified conversion.
   #Response:
-  # :id           => 7710
-  # :name         => "string"
-  # :code         => "B73D5EFC063B487A829A73B3BB21E9F6"
-  # :description  => "string"
-  # :creationDate => "20150225152245"
-  # :value        => 0.0
+  # {
+  #     "id": 7719,
+  #     "name": "string",
+  #     "code": "E5788830018D4864A90291006CB072DC",
+  #     "description": "string",
+  #     "creationDate": "20150225172053",
+  #     "value": 0.00
+  # }
   get :find, '/conversions/:id'
 
   #Update the specified conversion
-  # Response:
-  # :id => 7711,
-  # :uri => "/conversions/7711"
-  # :name => "string"  (optional)
+  #Response:
+  # {
+  #     "id": 7730,
+  #     "uri": "/conversions/7730"
+  # }
   post :save, '/conversions/:id'
 
   #Get a count of the conversions. You can use the same filters as "/conversions"
   #Response:
-  #:count => 1
+  # {
+  #     "count": 2
+  # }
   get :count, '/conversions/count'
 end

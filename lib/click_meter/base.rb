@@ -6,11 +6,26 @@ module ClickMeter
     include Configuration
 
     before_request :add_authentication_details
-    request_body_type :json
+
+    def self.inherited(klass)
+      super
+      klass.class_eval {
+        after_request :debug_response
+        request_body_type :json
+      }
+    end
 
     private
 
+    def debug_response(method, response)
+      return unless self.class.debug?
+      puts "Status: #{response.status}"
+      puts response.body
+    end
+
     def add_authentication_details(name, request)
+      #Add 'Content-Type' header. This is unusual for the request headers, but, otherwise, the API does not see POST body.
+      request.headers['Content-Type'] = 'application/json; charset=UTF-8'
       request.headers["X-Clickmeter-Authkey"] = self.class.auth_key.to_s
     end
   end
