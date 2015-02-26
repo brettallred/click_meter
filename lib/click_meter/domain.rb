@@ -1,3 +1,4 @@
+#Section: Datapoints Management - Domains
 class ClickMeter::Domain < ClickMeter::Base
   #Create a new personal domain to use in your datapoints
   # Response:

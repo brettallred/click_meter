@@ -1,3 +1,4 @@
+#Section: Datapoints Management - Conversions
 class ClickMeter::Conversion < ClickMeter::Base
   #Creates conversion
   # Response:

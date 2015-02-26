@@ -1,3 +1,4 @@
+#Seciton: Accounting
 class ClickMeter::Account < ClickMeter::Base
   # Attributes
   # :email            => "brett@nuvi.com",

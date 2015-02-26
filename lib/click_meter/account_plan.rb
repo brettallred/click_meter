@@ -1,3 +1,4 @@
+#Section: Accounting
 class ClickMeter::AccountPlan < ClickMeter::Base
   # Retrieve Customer's Plan
   # Response:

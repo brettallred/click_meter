@@ -1,3 +1,4 @@
+#Section: Datapoints Management - Datapoints
 class ClickMeter::Datapoint < ClickMeter::Base
   #List of all the datapoints associated to the user
   # Response
