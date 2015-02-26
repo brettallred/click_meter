@@ -13,6 +13,7 @@ require "click_meter/tag"
 require "click_meter/top_trend"
 require "click_meter/group"
 require "click_meter/aggregated_stat"
+require "click_meter/account_guest"
 require "active_rest_client"
 
 module ClickMeter
