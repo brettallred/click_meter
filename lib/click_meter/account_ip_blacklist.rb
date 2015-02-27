@@ -1,6 +1,11 @@
 #Section: Accounting - Whitelist
 class ClickMeter::AccountIpBlacklist < ClickMeter::Base
   #List custom blacklisted IPs. Valid only for master key. Maximum 50 elements
+  #Response
+  # {
+  #     "id": "F528764D624DB129B32C21FBCA0CB8D6",
+  #     "ip": "127.0.0.1"
+  # }
   get :all, '/account/ipblacklist'
 
   #Get information about a IP in blacklist. Valid only for master key
