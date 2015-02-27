@@ -49,5 +49,10 @@ class ClickMeter::AccountGuest < ClickMeter::Base
   get :permissions, '/account/guests/:id/permissions'
 
   #Add / remove permission
-  put :permission, '/account/guests/:id/:type/patch'
+  #Response
+  # {
+  #     "id": 189628,
+  #     "uri": "/groups/189628"
+  # }
+  post :permission, '/account/guests/:id/:type/permissions/patch'
 end
