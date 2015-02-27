@@ -7,5 +7,5 @@ Rake::TestTask.new do |t|
 end
 
 task :console do
-  exec "irb -r click_meter -I ./lib"
+  exec "irb -r click_meter -I ./lib -r ./debug_settings"
 end
