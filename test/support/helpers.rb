@@ -9,4 +9,8 @@ class ActiveSupport::TestCase
     assert_equal response._status, 200, "Response must return status 200. Returned - #{response._status}"
   end
 
+  def pending(message = nil)
+    assert false, "\e[33m#{message}\e[0m"
+  end
+
 end
