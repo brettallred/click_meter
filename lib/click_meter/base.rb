@@ -19,6 +19,7 @@ module ClickMeter
 
     def debug_response(method, response)
       return unless self.class.debug?
+      puts "#{self.class}##{method}"
       puts "Status: #{response.status}"
       puts response.body
     end
