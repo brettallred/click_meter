@@ -27,10 +27,9 @@ class TagTest < ActiveSupport::TestCase
   end
 
   test 'destroy' do
-    pending "Returns error - The requested resource does not support http method 'POST'. Same with 'DELETE'."
-    response = with_vcr -> { ClickMeter::Tag.destroy(:id => 21016) }
+    response = with_vcr -> { ClickMeter::Tag.destroy(:id => 20518) }
     assert_status_ok response
-    assert_equal response.id, 21016
+    assert_equal response.id, 20518
   end
 
   test 'datapoint' do
