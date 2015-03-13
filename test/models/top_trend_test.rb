@@ -4,7 +4,7 @@ class TopTrendTest < ActiveSupport::TestCase
 
   test 'conversion' do
     pending "Returns 403 with no message"
-    response = with_vcr -> { ClickMeter::TopTrend.conversion(:id => 7730, :timeframe => 'last7', :type => 'TL') }
+    response = with_vcr -> { ClickMeter::TopTrend.conversion(:id => 7730, :timeframe => 'last7', :type => 'browsers') }
     assert_status_ok response
     assert_respond_to response, :data
   end

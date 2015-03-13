@@ -86,7 +86,7 @@ class AggregatedStatTest < ActiveSupport::TestCase
 
   test 'group_summary' do
     pending "Doesn't work. Returns 'No route matches'"
-    response = with_vcr -> { ClickMeter::AggregatedStat.group_summary(:timeframe => 'last7', :sortBy => ' totalclicks', :id => 191837) }
+    response = with_vcr -> { ClickMeter::AggregatedStat.group_summary(:timeframe => 'last7', :sortBy => 'totalclicks', :id => 191837) }
     assert_status_ok response
   end
 
