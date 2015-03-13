@@ -8,6 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = ClickMeter::VERSION
   spec.authors       = ["Brett Allred"]
   spec.email         = ["brettallred@gmail.com"]
+  spec.homepage      = "https://github.com/brettallred/click_meter"
   spec.summary       = %q{Ruby gem that implements the click meter api}
   spec.description   = %q{Ruby gem that implements the click meter api}
   spec.homepage      = ""
