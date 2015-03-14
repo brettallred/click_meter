@@ -44,7 +44,7 @@ class ClickMeter::Tag < ClickMeter::Base
   #     "id": 20544,
   #     "uri": "/domains/20544"
   # }
-  post :destroy, '/tags/:id'
+  delete :destroy, '/tags/:id'
 
   #Patch a tag to be assigned or removed from a datapoint
   # {
